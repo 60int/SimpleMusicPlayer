@@ -32,11 +32,6 @@ namespace SimpleMusicPlayer
                 Songs[8].SongFilePath.ToString(),
                 Songs[9].SongFilePath.ToString(),
                 Songs[10].SongFilePath.ToString(),
-                Songs[11].SongFilePath.ToString(),
-                Songs[12].SongFilePath.ToString(),
-                Songs[13].SongFilePath.ToString(),
-                Songs[14].SongFilePath.ToString(),
-                Songs[15].SongFilePath.ToString(),
                 Songs[0].SongFilePath.ToString(),
                 Songs[1].SongFilePath.ToString(),
                 Songs[2].SongFilePath.ToString(),
@@ -47,12 +42,7 @@ namespace SimpleMusicPlayer
                 Songs[7].SongFilePath.ToString(),
                 Songs[8].SongFilePath.ToString(),
                 Songs[9].SongFilePath.ToString(),
-                Songs[10].SongFilePath.ToString(),
-                Songs[11].SongFilePath.ToString(),
-                Songs[12].SongFilePath.ToString(),
-                Songs[13].SongFilePath.ToString(),
-                Songs[14].SongFilePath.ToString(),
-                Songs[15].SongFilePath.ToString()
+                Songs[10].SongFilePath.ToString()
             }.OrderBy(a => rnd1.Next()).ToList();
 
             listBox1.DataSource = Playlist;
