@@ -3,6 +3,7 @@
 Usage
 
 Open the songs.csv file (/Resources) and add the path of the songs you want to listen to like this:
+
 C:\Songs\Skyrim - Music & Ambience - Night.mp3;
 C:\Songs\Dark Souls- Souls of Fire (Slowed Down).mp3;
 
