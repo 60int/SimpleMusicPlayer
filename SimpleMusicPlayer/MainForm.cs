@@ -48,15 +48,15 @@ namespace SimpleMusicPlayer
                 Songs[10].SongFilePath.ToString()
             }.OrderBy(a => rnd1.Next()).ToList();
 
-            listBox1.DataSource = Playlist;
+            SongsListBox.DataSource = Playlist;
 
             Player = new ListPlayer(Playlist);
 
             //Attach event handler that sets the text of the label called _nowPlayingLabel
             //Remove directory and file extension from file name
             Player.NowPlaying += (s, e) => SongNameLabel.Text = e?.Replace(".mp3", "");
-            --listBox1.SelectedIndex;
-            Player.NowPlaying += (s, e) => listBox1.SelectedIndex++;
+            --SongsListBox.SelectedIndex;
+            Player.NowPlaying += (s, e) => SongsListBox.SelectedIndex++;
         }
 
     private void PlayButton_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace SimpleMusicPlayer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            listBox1.Refresh();
+            SongsListBox.Refresh();
         }
     }
 }
