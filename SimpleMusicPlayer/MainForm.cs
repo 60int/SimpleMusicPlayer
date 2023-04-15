@@ -16,41 +16,31 @@ namespace SimpleMusicPlayer
         public MainForm()
         {
             InitializeComponent();
+            
             foreach (var item in File.ReadAllLines("songs.csv", Encoding.UTF8))
             {
                 Song song = new(item);
                 Songs.Add(song);
             }
-            Playlist = new List<string>()
+            
+            Playlist = new List<string>();
+
+            for (int i = 0; i < 15; i++)
             {
+                Playlist.Add(Songs[i].SongFilePath.ToString());
+            }
 
-                Songs[0].SongFilePath.ToString(),
-                Songs[1].SongFilePath.ToString(),
-                Songs[2].SongFilePath.ToString(),
-                Songs[3].SongFilePath.ToString(),
-                Songs[4].SongFilePath.ToString(),
-                Songs[5].SongFilePath.ToString(),
-                Songs[6].SongFilePath.ToString(),
-                Songs[7].SongFilePath.ToString(),
-                Songs[8].SongFilePath.ToString(),
-                Songs[9].SongFilePath.ToString(),
-                Songs[10].SongFilePath.ToString(),
-                Songs[0].SongFilePath.ToString(),
-                Songs[1].SongFilePath.ToString(),
-                Songs[2].SongFilePath.ToString(),
-                Songs[3].SongFilePath.ToString(),
-                Songs[4].SongFilePath.ToString(),
-                Songs[5].SongFilePath.ToString(),
-                Songs[6].SongFilePath.ToString(),
-                Songs[7].SongFilePath.ToString(),
-                Songs[8].SongFilePath.ToString(),
-                Songs[9].SongFilePath.ToString(),
-                Songs[10].SongFilePath.ToString()
-            }.OrderBy(a => rnd1.Next()).ToList();
+            for (int i = Playlist.Count - 1; i > 0; i--)
+            {
+                int j = rnd1.Next(i + 1);
+                string temp = Playlist[i];
+                Playlist[i] = Playlist[j];
+                Playlist[j] = temp;
+            }
 
-            SongsListBox.DataSource = Playlist;
+            listBox1.DataSource = Playlist;
 
-            Player = new ListPlayer(Playlist);
+            Player = new PlayrList(Playlist);
 
             //Attach event handler that sets the text of the label called _nowPlayingLabel
             //Remove directory and file extension from file name
