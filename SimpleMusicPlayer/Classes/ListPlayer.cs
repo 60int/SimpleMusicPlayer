@@ -40,7 +40,7 @@ namespace MusicPlayerTest
             player = new WaveOutEvent();
             fileWaveStream = new AudioFileReader(f);
             player.Init(fileWaveStream);
-            player.PlaybackStopped += (sender, evn) => { PlaySong(); };
+            player.PlaybackStopped += (sender, evn) => { playlist.Enqueue(f); PlaySong(); };
             player.Play();
 
             var e = NowPlaying;
