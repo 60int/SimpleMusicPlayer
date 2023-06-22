@@ -11,4 +11,4 @@ Then put the songs inside the same folder,
 
 Finally you can open the .exe that is located in the bin folder
 You can only put 10 songs in the list currently, I will be updating the functionality of the app on the go.
-Enjoy! :)
+Thanks! :)
