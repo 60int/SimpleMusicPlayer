@@ -4,7 +4,7 @@ Usage
 
 Open the songs.csv file (SimpleMusicPlayer\bin\Debug\net6.0-windows) and add the name of the songs you want to listen to like this:
 
-Skyrim - Music & Ambience - Night.mp3;
+Skyrim - Music & Ambience - Night.mp3;                                                                                                                                                
 Dark Souls- Souls of Fire.mp3;
 
 Then put the songs inside the same folder,
